@@ -3,7 +3,7 @@
     "connection": "mssql://sa:SecretPassword!@sql/cdc",
     "executions": {
       "configuration": {
-        "connection": "mssql://sa:SecretPassword!@sql/cdc",
+        "connection": "mssql://sa:SecretPassword!@sql/configuration",
         "scan": 500,
         "tables": [
           "Accounts",

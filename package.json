@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src --out-dir dist",
     "lint": "eslint .",
-    "serve": "node dist/server.js",
+    "serve": "node --trace-warnings dist/server.js",
     "start": "nodemon --exec babel-node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

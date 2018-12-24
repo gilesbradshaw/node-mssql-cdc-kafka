@@ -1,12 +1,15 @@
-import { Producer } from 'sinek'
+import { NProducer } from 'sinek'
 
+let x = 1
 export default ({
   config,
   tables,
   topic,
 }) => {
-  const producer = new Producer(
-    config,
+  const producer = new NProducer(
+    {
+      ...config,
+    },
     tables.map(topic),
     1,
   )
@@ -34,7 +37,7 @@ export default ({
                             change,
                             0,
                           ).then(
-                            xx => console.log({ xx }),
+                            console.log,
                           ),
                       ),
                   ),

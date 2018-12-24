@@ -1,6 +1,8 @@
-# node-cdc
+# node-mssql-cdc-kafka
 
-This is scanning all the tables in Configuration and streaming to kafka
+Inspired by https://github.com/Vanlightly/CDC-Tools
+
+This is scanning all the tables in [Configuration] db and streaming to kafka
 
 cdc database has one table:
 
@@ -36,6 +38,8 @@ see https://github.com/nodefluent/node-sinek/blob/master/lib/librdkafka/README.m
 
 
 to run..
+config in config/defaukt.json
+
 ````
 export CDC_CONNECTION='mssql://sa:SecretPassword!@sql/cdc'
 export CONFIGURATION_CONNECTION='mssql://sa:SecretPassword!@sql/Configuration'

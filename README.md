@@ -36,9 +36,9 @@ RUN apt-get install -y librdkafka-dev libsasl2-dev
 
 see https://github.com/nodefluent/node-sinek/blob/master/lib/librdkafka/README.md for mac
 
+config in config/default.json
 
 to run..
-config in config/defaukt.json
 
 ````
 export CDC_CONNECTION='mssql://sa:SecretPassword!@sql/cdc'

@@ -1,0 +1,13 @@
+{
+  "cdc": {
+    "connection": "CDC_CONNECTION",
+    "executions": {
+      "configuration": {
+        "connection": "CONFIGURATION_CONNECTION"
+      }
+    }
+  },
+  "producer": {
+    "kafkaHost": "KAFKA_HOST"
+  }
+}

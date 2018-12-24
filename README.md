@@ -41,5 +41,5 @@ export CDC_CONNECTION='mssql://sa:SecretPassword!@sql/cdc'
 export CONFIGURATION_CONNECTION='mssql://sa:SecretPassword!@sql/Configuration'
 export KAFKA_HOST='broker:9092, broker1:9093, broker2:9094'
 
-npm run start
+yarn start
 ````

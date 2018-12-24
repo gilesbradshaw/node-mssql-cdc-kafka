@@ -1,0 +1,109 @@
+{
+  "cdc": {
+    "connection": "mssql://sa:SecretPassword!@sql/cdc",
+    "executions": {
+      "configuration": {
+        "connection": "mssql://sa:SecretPassword!@sql/cdc",
+        "scan": 500,
+        "tables": [
+          "Accounts",
+          "AlarmSeverities",
+          "AlarmValues",
+          "Alarms",
+          "Applications",
+          "BoolEnumerations",
+          "BoolFormulas",
+          "BoolParameterNodes",
+          "BoolParameters",
+          "ChartAxes",
+          "ChartPens",
+          "ChartTicks",
+          "Charts",
+          "Clearances",
+          "CommandClearances",
+          "CommandNodes",
+          "Commands",
+          "DataLogNodes",
+          "DeviceDisplays",
+          "DeviceInstanceDisplays",
+          "DeviceInstanceTags",
+          "DeviceInstances",
+          "DeviceTags",
+          "Devices",
+          "DoubleFormulas",
+          "DoubleParameterNodes",
+          "DoubleParameters",
+          "Enterprises",
+          "Folders",
+          "FormulaSteps",
+          "Formulae",
+          "Groups",
+          "IntegerEnumerations",
+          "IntegerFormulas",
+          "IntegerParameterNodes",
+          "IntegerParameters",
+          "Mimics",
+          "NodePageItems",
+          "NodePages",
+          "Nodes",
+          "Operations",
+          "Plcs",
+          "ProcedureSteps",
+          "Procedures",
+          "Products",
+          "ReportNodes",
+          "Reports",
+          "ScanClasses",
+          "Signatures",
+          "Sites",
+          "StateNodes",
+          "StringFormulas",
+          "StringParameterNodes",
+          "StringParameters",
+          "UnitProcedures",
+          "Units",
+          "ZoneClearances",
+          "Zones"
+        ]
+      }
+    }
+  },
+  "producer": {
+    "kafkaHost": "broker:9092",
+    "groupId": "kafka-streams-test",
+    "clientName": "kafka-streams-test-name",
+    "workerPerPartition": 1,
+    "noptions": {
+      "metadata.broker.list": "broker:9092, broker1:9093, broker2:9094",
+      "group.id": "kafka-streams-test-native",
+      "client.id": "kafka-streams-test-name-native",
+      "event_cb": true,
+      "api.version.request": true,
+      "compression.codec": "snappy",
+  
+      "socket.keepalive.enable": true,
+      "socket.blocking.max.ms": 100,
+  
+      "enable.auto.commit": false,
+      "auto.commit.interval.ms": 100,
+  
+      "heartbeat.interval.ms": 250,
+      "retry.backoff.ms": 250,
+  
+      "fetch.min.bytes": 100,
+      "fetch.message.max.bytes": 210241024,
+      "queued.min.messages": 100,
+  
+      "fetch.error.backoff.ms": 100,
+      "queued.max.messages.kbytes": 50,
+  
+      "fetch.wait.max.ms": 1000,
+      "queue.buffering.max.ms": 1000,
+  
+      "batch.num.messages": 10000
+    },
+    "tconf": {
+      "request.required.acks": 1
+    }
+  }
+}

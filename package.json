@@ -1,0 +1,35 @@
+{
+  "name": "node-cdc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "lint": "eslint .",
+    "serve": "node dist/server.js",
+    "start": "nodemon --exec babel-node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giles Bradshaw <giles.bradshaw@sigyl.com> (https://github.com/gilesbradshaw)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "config": "^3.0.1",
+    "mssql": "^4.3.0",
+    "node-rdkafka": "^2.5.1",
+    "sinek": "^6.23.4",
+    "squel": "^5.12.2"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb-base",
+    "rules": {
+        "semi": [2, "never"],
+        "implicit-arrow-linebreak": 0
+    }
+}

@@ -1,0 +1,11 @@
+// .babelrc
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    "transform-function-bind",
+    "@babel/plugin-proposal-object-rest-spread"
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}

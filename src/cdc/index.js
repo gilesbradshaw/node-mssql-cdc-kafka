@@ -94,6 +94,7 @@ const cdc = ({
                     lastScan: thisScan + pause,
                     publisher,
                     scan,
+                    schema,
                     tables,
                   }),
               ),

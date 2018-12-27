@@ -7,3 +7,4 @@ export default ({
     .request()
     .query('SELECT sys.fn_cdc_get_max_lsn()')
     .then(resultHex)
+    

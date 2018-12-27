@@ -34,7 +34,7 @@ export default ({
           seqVal,
         }) =>
           ({
-            minLsn: lsn || minValidLsn,
+            minLsn: (lsn && lsn > minValidLsn) ? lsn : minValidLsn,
             seqVal,
           }),
       )

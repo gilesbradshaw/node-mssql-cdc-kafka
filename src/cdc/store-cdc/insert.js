@@ -16,7 +16,7 @@ export default ({
         .into('[Cdc].[ChangeState]')
         .setFields({
           executionId,
-          schema,
+          '[schema]': schema,
           tableName: table,
           lsn: squel.str(
             `CONVERT(BINARY(10),'${

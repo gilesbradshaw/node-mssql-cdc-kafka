@@ -45,7 +45,7 @@ export default ({
           `tableName = '${table}'`,
         )
         .where(
-          `schema = '${schema}'`,
+          `[schema] = '${schema}'`,
         )
         .toString(),
     )

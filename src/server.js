@@ -41,6 +41,7 @@ new mssql
                             executionId,
                             publisher,
                             scan: config.executions[executionId].scan,
+                            schema: config.executions[executionId].schema,
                             tables: config.executions[executionId].tables,
                           }),
                       ),

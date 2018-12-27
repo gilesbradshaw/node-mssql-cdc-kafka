@@ -3,6 +3,7 @@ import squel from './squel'
 export default ({
   batchSize,
   connection,
+  schema,
   table,
   toLsn,
 }) =>
@@ -17,7 +18,7 @@ export default ({
           squel
             .select()
             .from(
-              `[cdc].[fn_cdc_get_all_changes_dbo_${table}](
+              `[cdc].[fn_cdc_get_all_changes_${schema}_${table}](
                 CONVERT(BINARY(10),'${minLsn || '00000000000000000000'}', 2),
                 CONVERT(BINARY(10),'${toLsn}', 2),
                 'all')`,

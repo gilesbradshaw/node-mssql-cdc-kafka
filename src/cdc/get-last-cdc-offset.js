@@ -3,6 +3,7 @@ import squel from './squel'
 export default ({
   connection,
   executionId,
+  schema,
   table,
 }) =>
   minValidLsn =>
@@ -15,6 +16,7 @@ export default ({
           .field('SeqVal')
           .from('[Cdc].[ChangeState]')
           .where(`ExecutionId = '${executionId}'`)
+          .where(`[schema] = '${schema}'`)
           .where(`TableName = '${table}'`)
           .toString(),
       )

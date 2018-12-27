@@ -3,6 +3,7 @@ import squel from '../squel'
 export default ({
   connection,
   executionId,
+  schema,
   table,
   lsn,
   seqVal,
@@ -42,6 +43,9 @@ export default ({
         )
         .where(
           `tableName = '${table}'`,
+        )
+        .where(
+          `schema = '${schema}'`,
         )
         .toString(),
     )

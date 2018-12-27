@@ -14,6 +14,7 @@ const cdc = ({
   lastScan = Date.now(),
   maxLsn: lastMaxLsn,
   scan,
+  schema,
   tables,
 }) => {
   const thisScan = Date.now()
@@ -34,11 +35,13 @@ const cdc = ({
                       table =>
                         getMinValidLsn({
                           connection,
+                          schema,
                           table,
                         })
                           .then(
                             getLastCdcOffset({
                               executionId,
+                              schema,
                               table,
                               connection: cdcConnection,
                             }),
@@ -47,6 +50,7 @@ const cdc = ({
                             getChangeBatch({
                               batchSize: 100,
                               connection,
+                              schema,
                               table,
                               toLsn: maxLsn,
                             }),
@@ -72,6 +76,7 @@ const cdc = ({
                           .map(
                             storeCdc({
                               connection: cdcConnection,
+                              schema,
                               executionId,
                             }),
                           ),

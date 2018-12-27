@@ -5,6 +5,7 @@ import update from './update'
 export default ({
   connection,
   executionId,
+  schema,
 }) =>
   ({
     changes,
@@ -18,6 +19,7 @@ export default ({
           executionId,
           lsn: changes[changes.length - 1] // eslint-disable-line no-underscore-dangle
             .__$start_lsn,
+          schema,
           seqVal: changes[changes.length - 1] // eslint-disable-line no-underscore-dangle
             .__$seqval,
           table,

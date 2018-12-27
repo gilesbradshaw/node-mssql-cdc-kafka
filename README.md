@@ -13,7 +13,9 @@ USE CDC
 GO
 CREATE SCHEMA CDC
 GO
-CREATE TABLE [CDC].[ChangeState]([ExecutionId] [varchar](50) NOT NULL,[TableName] [varchar](200) NOT NULL,[Lsn] [binary](10) NOT NULL,[SeqVal] [binary](10) NOT NULL,[LastUpdate] [datetime] NOT NULL,PRIMARY KEY CLUSTERED ([ExecutionId] ASC,[TableName] ASC))
+CREATE TABLE [CDC].[ChangeState]([ExecutionId] [varchar](50) NOT NULL,
+[Schema] [varchar](200) NOT NULL,
+[TableName] [varchar](200) NOT NULL,[Lsn] [binary](10) NOT NULL,[SeqVal] [binary](10) NOT NULL,[LastUpdate] [datetime] NOT NULL,PRIMARY KEY CLUSTERED ([ExecutionId] ASC,[Schema] ASC, [TableName] ASC))
 GO
 ````
 

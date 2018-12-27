@@ -3,6 +3,7 @@ import squel from '../squel'
 export default ({
   connection,
   executionId,
+  schema,
   table,
   lsn,
   seqVal,
@@ -15,6 +16,7 @@ export default ({
         .into('[Cdc].[ChangeState]')
         .setFields({
           executionId,
+          schema,
           tableName: table,
           lsn: squel.str(
             `CONVERT(BINARY(10),'${
